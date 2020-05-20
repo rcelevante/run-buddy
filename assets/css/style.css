@@ -8,13 +8,7 @@ header {
   padding: 20px 35px;
   background-color: #39a6b2;
 } 
-header h1 {
-  font-weight: bold;
-  font-size: 36px;
-  color: #fce138;
-  margin: 0;
-  display: inline;
-}
+
 header a {
   text-decoration: none;
   color: #fce138;
@@ -31,16 +25,31 @@ header nav ul li a {
   font-weight: lighter;
   font-size: 22px;
 }
+
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: #fce138;
+  margin: 0;
+  display: inline;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+section {
+  padding: 60px;
+  
 }
 /* Hero Style Start */
 .hero {
   background-image: url("../images/hero-bg.jpg");
   height: 600px;
   background-size: cover;
-  background-position: center;
+  background-position: bottom;
+  position: relative;
 }
 .hero-form {
   background-color: #fce138;
@@ -134,13 +143,16 @@ header nav ul li a {
 .steps span {
   font-size: 38px;
 }
-.trainer {
+.trainers {
   text-align: center;
+}
+.trainer {
   width: 900px;
   margin: 0 auto 30px auto;
   background: #024e76;
   color: #fce138;
   overflow: auto
+  
 }
 .trainer img {
   width: 35%;
@@ -152,6 +164,7 @@ header nav ul li a {
   float: left;
   width: 65%;
 }
+
 .text-left {
   text-align: left;
 }
@@ -234,3 +247,26 @@ header nav ul li a {
   font-size: 20px;
   color: red;
 }
+
+/* FOOTER STYLES START */
+footer {
+  background: #fce138;
+  width: 100%;
+  padding: 40px 35px;
+}
+
+footer h2 {
+  display: inline;
+  color: #024e76;
+  font-size: 30px;
+  margin: 0;
+}
+footer div {
+  float: right;
+  line-height: 1.5;
+  text-align: right;
+}
+footer a {
+  color: #024e76;
+}
+
