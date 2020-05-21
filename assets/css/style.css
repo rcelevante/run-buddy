@@ -40,7 +40,7 @@ header h1 {
   box-sizing: border-box;
 }
 section {
-  padding: 60px;
+  padding: 0px;
   
 }
 /* Hero Style Start */
@@ -58,7 +58,7 @@ section {
   color: #024e76;
   border: solid 3px #024e76;
   position: absolute;
-  bottom: 120px;
+  bottom: 50px;
   right: 140px;
 }
 .hero-form h3 {
