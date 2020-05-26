@@ -226,6 +226,19 @@ section {
 .trainer-bio p {
   font-size: 17px;
 }
+/* SERVICE PLAN STYLE START*/
+.service-grid-container {
+  display: grid;
+}
+.service-grid-item {
+  
+}
+.service-grid-container {
+  
+}
+.grid-container {
+  place-items: <align-items>  <justify-items>;
+}
 
 /* REACH OUT STYLES START */
 .contact {
