@@ -6,13 +6,13 @@
 
 body {
   
-  /*color: #39a6b2;*/
+  color: #39a6b2;
   font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
   padding: 20px 35px;
-  background-color: var(--tertiary-color);
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -224,7 +224,7 @@ section {
   color: var(--tertiary-color);
   width: 80%;
   font-size: 20px;
-  text-align: center
+  text-align: center;
   margin: 0px auto;
 }
 
@@ -302,9 +302,46 @@ section {
   background: var(--secondary-color);
   color: var(--primary-color);
   flex: 1;
+  overflow: hidden;
 }
-.trainer img {
+.trainer-img {
   width: 100%;
+  min-height: 300px;
+  display: flex;
+  padding: 15px;
+  align-items: flex-end; 
+  position: relative;
+  
+}
+.trainer-img::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(252, 225, 56, 0.3), rgba(2, 78, 118, 1));
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+  
+}
+.trainer:hover .trainer-img::after {
+  opacity: 1;
+}
+
+.trainer-1 {
+  background-image: url("../images/trainer-1.jpg");
+  background-size: cover;
+}
+
+.trainer-2 {
+  background-image: url("../images/trainer-2.jpg");
+  background-size: cover;
+}
+
+.trainer-3 {
+  background-image: url("../images/trainer-3.jpg");
+  background-size: cover;
 }
 
 .trainer-bio {
@@ -314,17 +351,43 @@ section {
 
 .trainer-bio h3 {
   font-size: 28px;
+  margin-bottom: 5px;
+  position: relative;
+  display: none;
+  
 }
 
 .trainer-bio h4 {
   font-weight: lighter;
   font-size: 22px;
   margin-bottom: 15px;
+  position: relative;
+  display: none;
 }
 
 .trainer-bio p {
   font-size: 17px;
 }
+.trainer-img h3 {
+  position: relative;
+  z-index: 8888;
+  top: 500px;
+  transition: 0.6s;
+}
+
+.trainer-img h4 {
+  position: relative;
+  z-index: 7777;
+  top: 500px;
+  transition: 0.7s;
+}
+
+.trainer:hover .trainer-img h3, .trainer:hover .trainer-img h4 {
+  top: 0px;
+
+}
+
+
 /* SERVICE PLAN STYLE START*/
 .services {
   background: var(--primary-color); 
@@ -339,7 +402,6 @@ section {
   background: lightyellow;
   width: 80%;
   display: grid;
-  /* repeat(iterator, size) */
   grid-template-columns: 1fr repeat(2, 4fr);
   grid-template-rows: repeat(5, 1fr) 2fr;
   border: 2px solid var(--secondary-color);
@@ -578,6 +640,24 @@ footer a {
     writing-mode: unset;
     grid-column: 1 / -1;
     grid-row: -1;
+  }
+  .trainer-img::after {
+    display: none;
+  }
+  .trainer-img h3 {
+    position: relative;
+    z-index: 8888;
+    top: 0px;
+    transition: 0.6s;
+    display: block;
+  }
+  
+  .trainer-img h4 {
+    position: relative;
+    z-index: 7777;
+    top: 0px;
+    transition: 0.7s;
+    display: block;
   }
 }
 @media screen and (max-width: 575px) {
